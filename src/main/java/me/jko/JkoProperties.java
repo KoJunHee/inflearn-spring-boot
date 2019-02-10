@@ -2,12 +2,21 @@ package me.jko;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Component
 @ConfigurationProperties("jko")
+@Validated
 public class JkoProperties {
+    @NotEmpty
     String name;
+
     String fullName;
+
+    @Size(min = 0, max = 100)
     int age;
 
     public String getName() {

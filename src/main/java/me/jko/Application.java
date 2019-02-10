@@ -15,12 +15,5 @@ public class Application {
         springApplication.run(args);
     }
 
-    // 이게 우선시 되어야 하는데, 두 번째 Scan 인 Auto Configuration 때문에 이게 적용이 안됨.
-    @Bean
-    public Holoman holoman(){
-        Holoman holoman = new Holoman();
-        holoman.setHowLong(10000);
-        holoman.setName("Junhee Ko");
-        return holoman;
-    }
+
 }

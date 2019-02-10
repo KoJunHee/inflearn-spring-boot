@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "jko",
+      "type": "me.jko.JkoProperties",
+      "sourceType": "me.jko.JkoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jko.age",
+      "type": "java.lang.Integer",
+      "sourceType": "me.jko.JkoProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "jko.full-name",
+      "type": "java.lang.String",
+      "sourceType": "me.jko.JkoProperties"
+    },
+    {
+      "name": "jko.name",
+      "type": "java.lang.String",
+      "sourceType": "me.jko.JkoProperties"
+    }
+  ],
+  "hints": []
+}

@@ -23,11 +23,11 @@ public class SampleRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        logger.info("===============================");
-        logger.info(hello);
-        logger.info(jkoProperties.getFullName());
-        logger.info(jkoProperties.getName());
-        logger.info("===============================");
+        logger.debug("===============================");
+        logger.debug(hello);
+        logger.debug(jkoProperties.getFullName());
+        logger.debug(jkoProperties.getName());
+        logger.debug("===============================");
 
 
         System.out.println("=========================");

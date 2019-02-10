@@ -12,10 +12,14 @@ public class SampleRunner implements ApplicationRunner {
     @Autowired
     String hello;
 
+    @Autowired
+    JkoProperties jkoProperties;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("=========================");
         System.out.println(hello);
+        System.out.println(jkoProperties.getName());
         System.out.println("=========================");
 
     }

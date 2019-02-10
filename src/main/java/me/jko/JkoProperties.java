@@ -11,12 +11,8 @@ import javax.validation.constraints.Size;
 @ConfigurationProperties("jko")
 @Validated
 public class JkoProperties {
-    @NotEmpty
     String name;
-
     String fullName;
-
-    @Size(min = 0, max = 100)
     int age;
 
     public String getName() {

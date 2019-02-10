@@ -10,14 +10,12 @@ import org.springframework.stereotype.Component;
 public class SampleRunner implements ApplicationRunner {
 
     @Autowired
-    JkoProperties jkoProperties;
+    String hello;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("=========================");
-        System.out.println(jkoProperties.getAge());
-        System.out.println(jkoProperties.getFullName());
-        System.out.println(jkoProperties.getName());
+        System.out.println(hello);
         System.out.println("=========================");
 
     }

@@ -1,7 +1,6 @@
 package me.jko.user;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -9,6 +8,11 @@ public class UserController {
     @GetMapping("/hello")
     public String hello(){
         return "hello";
+    }
+
+    @PostMapping("/users/create")
+    public @ResponseBody User create(@RequestBody User user){
+        return user;
     }
 
 }

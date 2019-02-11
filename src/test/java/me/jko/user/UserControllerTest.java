@@ -33,7 +33,7 @@ public class UserControllerTest {
         String userJson = "{\"username\":\"jko\", \"password\":\"123\"}";
         mockMvc.perform(post("/users/create")
                     .contentType(MediaType.APPLICATION_JSON_UTF8)
-                    .accept(MediaType.APPLICATION_JSON_UTF8)
+                    .accept(MediaType.APPLICATION_JSON_UTF8) //응답으로 JSON을 원한다.
                     .content(userJson))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username", is(equalTo("jko"))))

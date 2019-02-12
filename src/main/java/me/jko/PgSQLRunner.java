@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 @Component
-public class H2Runner implements ApplicationRunner {
+public class PgSQLRunner implements ApplicationRunner {
 
     @Autowired
     DataSource dataSource;
@@ -24,12 +24,13 @@ public class H2Runner implements ApplicationRunner {
         try (Connection connection = dataSource.getConnection()) {
             System.out.println(connection.getMetaData().getURL());
             System.out.println(connection.getMetaData().getUserName());
+            System.out.println(dataSource.getClass());
 
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
+            String sql = "CREATE TABLE ACCOUNT(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
             statement.execute(sql);
         }
 
-        jdbcTemplate.execute("INSERT INTO USER VALUES (1, 'jko')");
+        jdbcTemplate.execute("INSERT INTO ACCOUNT VALUES (1, 'jko')");
     }
 }
